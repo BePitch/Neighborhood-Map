@@ -85,19 +85,6 @@ function initMap() {
         styles: styles,
         mapTypeControl: false
     });
-    // This autocomplete is for use in the search within time entry box.
-    var timeAutocomplete = new google.maps.places.Autocomplete(
-        document.getElementById('search-within-time-text'));
-    // This autocomplete is for use in the geocoder entry box.
-    var zoomAutocomplete = new google.maps.places.Autocomplete(
-        document.getElementById('zoom-to-area-text'));
-    // Bias the boundaries within the map for the zoom to area text.
-    zoomAutocomplete.bindTo('bounds', map);
-    // Create a searchbox in order to execute a places search
-    var searchBox = new google.maps.places.SearchBox(
-        document.getElementById('places-search'));
-    // Bias the searchbox to within the bounds of the map.
-    searchBox.setBounds(map.getBounds());
     // These are the real estate listings that will be shown to the user.
     // Normally we'd have these in a database instead.
     var locations = [
