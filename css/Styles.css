@@ -1,72 +1,170 @@
-html,
 body {
-  font-family: 'Roboto', sans-serif;
-  height: 100%;
   margin: 0;
-  padding: 0;
 }
-.container {
-  height: 100%;
-  position: relative;
+
+.filterDiv {
+  margin-top: 45px;
+  height: 5px;
+  border: 0;
+  width: 100%;
+  padding: 7%;
+  text-align: center;
+  font-size: 2.0vh;
+  box-sizing: border-box;
+  outline: none;
 }
-input {
-  font-size: 12px;
-}
-h1 {
-  color: #FFFFFF;
-  font-family: 'Roboto', sans-serif;
-  font-size: 22px;
-  margin: 0 0 10px 0;
+.map {
+  height: 100vh;
+  width: 100%;
   text-align: center;
 }
-#hide-listings,
-#show-listings {
-  width: 48%;
-  background: #D0D7D9;
-}
-hr {
-  background: #D0D7D9;
-  height: 1px;
-  margin: 20px 0 20px 0;
-  border: none;
-}
-#map {
-  bottom:0px;
-  height: 100%;
-  left: 362px;
-  position: absolute;
-  right: 0px;
-}
-.options-box {
-  background: #404040;
-  border: 1px solid #999;
-  border-radius: 3px;
-  height: 100%;
+.header {
+  height: 35px;
   line-height: 35px;
-  padding: 10px 10px 30px 10px;
-  text-align: left;
-  width: 340px;
+  padding-left: 20px;
+  text-align: center;
 }
-#pano {
+
+.foursquare-info {
+  position: absolute;
+  color: white;
+  top: 5px;
+  right: 20px;
+  font-size: 18px;
+  text-align: center;
+  width: 120px;
+  z-index: 1;
+  background-color: #607d8b;
+  border-radius: 20px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.container {
+  display: flex;
+
+}
+
+
+.locations {
+  margin: 0;
+  padding: 0;
+  
+}
+
+.location-item {
+  cursor: pointer;
+  color: white;
+  background-color:dodgerblue;
+  border:2px solid Tomato;
+  list-style-type: none;
+  font-size: 2.0vh;
+  padding: 2vh 2px;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  margin: 2vh 0;
+}
+
+.info-window > h4 {
+  margin: 0;
+  display: block;
+  background-color: #a3ccff;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.hidden-menu {
+  display: block;
+  position: fixed;
+  margin: 0;
+  box-sizing: border-box;
   width: 200px;
-  height: 200px;
+  background-color: #eee;
+  height: 100%;
+  font-family: 'Roboto Mono', monospace;
+  top: 0;
+  left: -200px;
+  transition: left .2s;
+  z-index: 2;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
 }
-#places-search,
-#search-within-time-text {
-  width: 84%;
+
+.hidden-menu-ticker {
+  display: none;
 }
-.text {
-  font-size: 12px;
-  color: #FFFFFF;
+
+.btn-menu {
+  display: flex;
+  line-height: 25px;
+  color: #fff;
+  background-color: dodgerblue;
+  padding: 5px;
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+  z-index: 3;
+  width: 200px;
+  border-radius: 5px;
 }
-#toggle-drawing {
-  width: 27%;
+
+.menu-text {
+  width: 100%;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.filterIcon {
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  transition: left .23s;
+  width: 30px;
+}
+
+.filterIcon span {
+  display: block;
+  height: 5px;
+  background-color: #fff;
+  margin: 5px 0 0;
+  transition: all .1s linear .03s;
   position: relative;
-  margin-left: 10px;
 }
-#zoom-to-area-text {
-  width: 70%;
+
+.filterIcon span.first {
+  margin-top: 0;
 }
-#zoom-to-area {
-  width: 24%;
+
+.hidden-menu-ticker:checked ~ .btn-menu {
+  border-radius: 50%;
+  width: 25px;
 }
+
+.hidden-menu-ticker:checked ~ .btn-menu > .menu-text {
+  display: none;
+}
+
+.hidden-menu-ticker:checked ~ .hidden-menu {
+  left: 0;
+}
+
+.hidden-menu-ticker:checked ~ .btn-menu > .filterIcon .first {
+  -webkit-transform: rotate(45deg);
+  top: 10px;
+}
+
+.hidden-menu-ticker:checked ~ .btn-menu > .filterIcon .second {
+  opacity: 0;
+}
+
+.hidden-menu-ticker:checked ~ .btn-menu > .filterIcon .third {
+  -webkit-transform: rotate(-45deg);
+  top: -10px;
+}
+
+.hidden-menu-ticker:checked > .container {
+  display: flex;
+}
+
+.gm-style-mtc {
+  display: none;
+}
+

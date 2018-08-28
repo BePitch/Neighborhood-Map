@@ -1,0 +1,20 @@
+https://api.foursquare.com/v2/venues/search?client_id=2L4TV51T5I23NPQF4SF1UPKR4QFKX4AO0VN4BSRTJ0K422VP&client_secret=Z4NQTBWKE40FRJFPQH4QXVJHHECPV50KDALJMY53ZGWMBUG0&ll=33.846536,-84.361811&query=Lenox&v=20180826
+
+var url = 'https://api.foursquare.com/v2/venues/search?' +
+                 'client_id=' + CLIENT_ID + '&client_secret=' + CLIENT_SECRET 
+                 + '&ll=' + params.lat + ',' + params.long + '&query=' + params.title +
+                '&v=20180826';
+
+
+https://api.foursquare.com/v2/venues/43695300f964a5208c291fe3/tips?client_id=2L4TV51T5I23NPQF4SF1UPKR4QFKX4AO0VN4BSRTJ0K422VP&client_secret=Z4NQTBWKE40FRJFPQH4QXVJHHECPV50KDALJMY53ZGWMBUG0&v=20180826
+
+    var urlHours = 'https://api.foursquare.com/v2/venues/' + self.venueID + '/tips?' +
+                  'client_id=' + CLIENT_ID + '&client_secret=' + CLIENT_SECRET 
+                  + '&v=20180826';
+    $.getJSON(urlHours).done(function(data2) {
+    var venueHours = data2.response.tips[0];
+      self.tips = venueHours.count;
+      
+    }).fail(function() {
+    alert('We are missing one square. Please try again later as we may have found the fourth square. API ERROR');
+      });
