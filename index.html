@@ -25,7 +25,7 @@
       </label>
 
       <div class="hidden-menu">
-        <input class="filterDiv" placeholder="Search Locations" data-bind="textInput: searchText, valueUpdate: 'afterkeydown'">
+        <input class="filterDiv" placeholder="Search" data-bind="textInput: searchText, valueUpdate: 'afterkeydown'">
         <ul class="locations" data-bind="foreach: filteredList">
           <li class="location-item" data-bind="text: $data.name, click: selectLocation"></li>
         </ul>
