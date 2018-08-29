@@ -13,7 +13,7 @@
   
   <body>
 
-  <input type="checkbox" id="filterIcon" class="hidden-menu-ticker">
+  <input type="checkbox" id="filterIcon" class="filterMenuList">
 
       <label class="btn-menu" for="filterIcon">
         <div class="filterIcon">
@@ -24,7 +24,7 @@
         <div class="menu-text">LOCATIONS</div>
       </label>
 
-      <div class="hidden-menu">
+      <div class="filterMenu">
         <input class="filterDiv" placeholder="Search" data-bind="textInput: searchText, valueUpdate: 'afterkeydown'">
         <ul class="locations" data-bind="foreach: filteredList">
           <li class="location-item" data-bind="text: $data.name, click: selectLocation"></li>
@@ -32,6 +32,7 @@
       </div>
 
     <div id="mapGoogle" class="map"></div>
+    <div class="footer">Data Source: GoogleAPI & Foursquare</div>
   </body>
   
   <script src="js/lib/jquery-3.3.1.min.js"></script>

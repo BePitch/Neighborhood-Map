@@ -44,7 +44,6 @@ var Location = function(attributes) {
           prevMarker.setAnimation(null);
           prevMarker = null;
         };
-    
         if (prevMarker) {
           cancelAnimation();
         }
