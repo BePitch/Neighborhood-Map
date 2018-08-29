@@ -59,7 +59,7 @@ var Location = function(attributes) {
             '<p>', self.street, '</p>',
             '<p>', self.city, '</p>',
             '<p>','Category: ', self.category, '</p>',
-            '<p>', 'Venue ID: ' + self.venueID, '</p>',
+            '<p>', 'Venue ID: ', self.venueID, '</p>',
           '</div>'
         ];
         var infoWindow = new google.maps.InfoWindow({ content: infoWindowContentData.join('') });
