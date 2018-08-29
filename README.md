@@ -11,6 +11,9 @@ FourSquare Developers:
 https://stackoverflow.com/questions/tagged/foursquare
 https://developer.foursquare.com/docs/api/getting-started
 
+Google Map Infowindow and Foursquare:
+https://stackoverflow.com/questions/41033116/using-foursquare-api-in-google-map-using-javascript
+
 Ajax:
 https://www.w3schools.com/js/js_ajax_intro.asp
 
