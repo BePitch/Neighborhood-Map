@@ -82,7 +82,7 @@ body {
   font-family: 'Roboto Mono', monospace;
 }
 
-.filterMenu {
+.hidden-menu {
   display: block;
   position: fixed;
   margin: 0;
@@ -99,7 +99,7 @@ body {
   -webkit-backface-visibility: hidden;
 }
 
-.filterMenuList {
+.hidden-menu-ticker {
   display: none;
 }
 
@@ -144,34 +144,34 @@ body {
   margin-top: 0;
 }
 
-.filterMenuList:checked ~ .btn-menu {
+.hidden-menu-ticker:checked ~ .btn-menu {
   border-radius: 50%;
   width: 25px;
 }
 
-.filterMenuList:checked ~ .btn-menu > .menu-text {
+.hidden-menu-ticker:checked ~ .btn-menu > .menu-text {
   display: none;
 }
 
-.filterMenuList:checked ~ .filterMenu {
+.hidden-menu-ticker:checked ~ .hidden-menu {
   left: 0;
 }
 
-.filterMenuList:checked ~ .btn-menu > .filterIcon .first {
+.hidden-menu-ticker:checked ~ .btn-menu > .filterIcon .first {
   -webkit-transform: rotate(45deg);
   top: 10px;
 }
 
-.filterMenuList:checked ~ .btn-menu > .filterIcon .second {
+.hidden-menu-ticker:checked ~ .btn-menu > .filterIcon .second {
   opacity: 0;
 }
 
-.filterMenuList:checked ~ .btn-menu > .filterIcon .third {
+.hidden-menu-ticker:checked ~ .btn-menu > .filterIcon .third {
   -webkit-transform: rotate(-45deg);
   top: -10px;
 }
 
-.filterMenuList:checked > .container {
+.hidden-menu-ticker:checked > .container {
   display: flex;
 }
 
